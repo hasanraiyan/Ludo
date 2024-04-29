@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="cube">
+        <div class="dot"></div>
+        <div class="side front"></div>
+        <div class="side left"></div>
+        <div class="side back"></div>
+        <div class="side right"></div>
+        <div class="side top"></div>
+        <div class="side bottom"></div>
+    </div>
+</div>
+<style>
+    :root{
+        --box:20px;
+    }
+    
+    .container{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .cube{
+        width: var(--box);
+        height: var(--box);
+        position: relative;
+        transform-style: preserve-3d;
+        animation: cube-rotate infinite 5s linear; 
+        animation-play-state: paused;
+    }
+    
+    .cube:not(:hover){
+        animation-play-state: running;
+    }
+    
+    .side{
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        /*border-radius: calc(var(--box) * 0.2);*/
+        transition: transform 0.4s;
+        /*border: calc(var(--box) * 0.05) solid rgb(247, 48, 171);*/
+        background-image: radial-gradient(circle, rgb(255, 0, 34) 0%, violet 50%, purple 100%);
+    }
+    
+    .side:hover{
+        background-color: rgba(0, 255, 0, 0.05);
+    }
+    
+    .front{
+        background-size: contain;
+        transform: translateZ(calc(var(--box) * 0.5));
+        background-image: url("https://static.generated.photos/vue-static/home/hero/2.png");
+    }
+    
+    .left{
+        transform: rotateY(-90deg) translateZ(calc(var(--box) * 0.5));
+    }
+    
+    .back{
+        transform: rotateY(180deg) translateZ(calc(var(--box) * 0.5));
+    }
+    
+    .right{
+        transform: rotateY(90deg) translateZ(calc(var(--box) * 0.5));
+    }
+    
+    .top{
+        transform: rotateX(90deg) translateZ(calc(var(--box) * 0.5));
+    }
+    
+    .bottom{
+        transform: rotateX(-90deg) translateZ(calc(var(--box) * 0.5));
+    }
+    
+    
+    
+    @keyframes cube-rotate{
+        from{
+            transform: rotate3d(1, 1, 1, 0deg);
+        }
+    
+        to{
+            transform: rotate3d(1, 1, 1, 360deg);
+        }
+    }
+    
+    </style>
+    <link rel="stylesheet" href="../static/responsive.css">
