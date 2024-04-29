@@ -5,7 +5,7 @@ function play() {
     // var header = document.getElementById("header");
     if (header) {
         header.style.height = "0px";
-        button.style.display = "none";
+        header.style.display = "none";
         console.log("hi");
     } else {
         console.error("Header element not found.");

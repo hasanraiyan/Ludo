@@ -9,24 +9,58 @@
 
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/responsive.css">
+
 </head>
 
 <body>
-    <header>
-        <div class="forms">
-            
+    <!-- <header onclick="play()" > -->
+        <header>
+        <div class="forms" id="player2">
+            <div style="color: rgb(251, 255, 0);">CHOOSE COLOR AND NAME</div>
+            <div>
+                <div class="p-d">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot" style="color: blue;"></i>
+                    </div>
+                    <input type="text" name="p1" id="p1" value="Player 1">
+                </div>
+                <div class="p-d">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot" style="color: red;"></i>
+                    </div>
+                    <input type="text" name="p2" id="p2" value="Player 2">
+                </div>
+                <div class="p-d">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot" style="color: green;"></i>
+                    </div>
+                    <input type="text" name="p3" id="p3" value="Player 3">
+                </div>
+                <div class="p-d">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot" style="color: yellow;"></i>
+
+                    </div>
+                    <input type="text" name="p4" id="p4" value="Player 4 ">
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="button">2P</div>
+                <div class="button">4P</div>
+            </div>
+            <span class="button button2" onclick="play()">Play</span>
         </div>
 
+        <!-- <div class="forms" style="border: 2px solid red; " id="player4" hidden>
+            <div>CHOOSE COLOR AND NAME</div>
+            <div>
+
+            </div>
+        </div> -->
     </header>
     <main>
-        <div class="player1-2">
+        <div class="top-players">
             <div class="p-red" style="color: red;">
-                <div class="dice">
-                    d
-                </div>
-                <div class="name">
-                    Raiyan
-                </div>
             </div>
             <div class="p-green">
 
@@ -93,7 +127,12 @@
                         </div>
                         <div class="room ">
                             <div class="normal border-blue">
-
+                                <div class="blue-piece">
+                                    <div class="blue-piece-inside">
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                            
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -107,7 +146,10 @@
                             <div class="box normal"></div>
                             <div class="box normal"></div>
                             <div class="box green star"><i class="fa-solid fa-star"></i></div>
-                            <div class="box normal"></div>
+                            <div class="box normal">
+                                
+
+                            </div>
                             <div class="box normal"></div>
                             <div class="box normal"></div>
                         </div>
@@ -230,7 +272,7 @@
                 </div>
             </div>
         </div>
-        <div class="player1-2">
+        <div class="top-players">
             <div class="p-red">
 
             </div>
@@ -242,5 +284,4 @@
     </main>
     <script src="../static/script.js"></script>
 </body>
-
 </html>
